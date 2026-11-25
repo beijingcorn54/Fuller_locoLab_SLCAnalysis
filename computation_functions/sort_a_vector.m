@@ -5,6 +5,7 @@
 % 4. Recorded Speed
 % 5. Subject
 
+
 % Keeps those measurements ingrained in the data
 
 function [sorted_data] = sort_a_vector(data, upper_bound, lower_bound, sorting_row)

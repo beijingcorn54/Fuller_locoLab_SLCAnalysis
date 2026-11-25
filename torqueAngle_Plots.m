@@ -1,5 +1,5 @@
+clear;
 clearvars -except directory dataBase;
-close all;
 
 % Static Variables
 force_threshold = 25;
@@ -45,29 +45,29 @@ if automatic_buckets
 % Plot based off metric and joint
     % Ankle Torque
     if ~by_incline
-        plot_sorted_data_automatic_buckets(in10_A_t, speed_filter, directory, -10, "Ankle", "Torque", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(in5_A_t, speed_filter, directory, -5, "Ankle", "Torque", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i0_A_t, speed_filter, directory, 0, "Ankle", "Torque", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i5_A_t, speed_filter, directory, 5, "Ankle", "Torque", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i10_A_t, speed_filter, directory, 10, "Ankle", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(in10_A_t, speed_filter, directory, -10, "Ankle", "Torque", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(in5_A_t, speed_filter, directory, -5, "Ankle", "Torque", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i0_A_t, speed_filter, directory, 0, "Ankle", "Torque", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i5_A_t, speed_filter, directory, 5, "Ankle", "Torque", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i10_A_t, speed_filter, directory, 10, "Ankle", "Torque", "N*m / kg", num_buckets);
     end
     
     % Knee Torque
     if ~by_incline
-        plot_sorted_data_automatic_buckets(in10_K_t, speed_filter, directory, -10, "Knee", "Torque", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(in5_K_t, speed_filter, directory, -5, "Knee", "Torque", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i0_K_t, speed_filter, directory, 0, "Knee", "Torque", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i5_K_t, speed_filter, directory, 5, "Knee", "Torque", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i10_K_t, speed_filter, directory, 10, "Knee", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(in10_K_t, speed_filter, directory, -10, "Knee", "Torque", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(in5_K_t, speed_filter, directory, -5, "Knee", "Torque", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i0_K_t, speed_filter, directory, 0, "Knee", "Torque", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i5_K_t, speed_filter, directory, 5, "Knee", "Torque", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i10_K_t, speed_filter, directory, 10, "Knee", "Torque", "N*m / kg", num_buckets);
     end
     
     % Ankle Angle
     if ~by_incline
-        plot_sorted_data_automatic_buckets(in10_A_a, speed_filter, directory, -10, "Ankle", "Angle", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(in5_A_a, speed_filter, directory, -5, "Ankle", "Angle", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i0_A_a, speed_filter, directory, 0, "Ankle", "Angle", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i5_A_a, speed_filter, directory, 5, "Ankle", "Angle", "Unkown Units", num_buckets);
-        plot_sorted_data_automatic_buckets(i10_A_a, speed_filter, directory, 10, "Ankle", "Angle", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(in10_A_a, speed_filter, directory, -10, "Ankle", "Angle", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(in5_A_a, speed_filter, directory, -5, "Ankle", "Angle", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i0_A_a, speed_filter, directory, 0, "Ankle", "Angle", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i5_A_a, speed_filter, directory, 5, "Ankle", "Angle", "N*m / kg", num_buckets);
+        plot_sorted_data_automatic_buckets(i10_A_a, speed_filter, directory, 10, "Ankle", "Angle", "N*m / kg", num_buckets);
     end
     
     % Knee Angle
@@ -82,41 +82,41 @@ if automatic_buckets
 % Plot based off incline
     % Incline -10
     if by_incline
-        plot_sorted_data_automatic_buckets(in10_A_t, speed_filter, directory, -10, "Ankle", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(in10_A_t, speed_filter, directory, -10, "Ankle", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(in10_A_a, speed_filter, directory, -10, "Ankle", "Angle", "Degrees", num_buckets);
-        plot_sorted_data_automatic_buckets(in10_K_t, speed_filter, directory, -10, "Knee", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(in10_K_t, speed_filter, directory, -10, "Knee", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(in10_K_a, speed_filter, directory, -10, "Knee", "Angle", "Degrees", num_buckets);
     end
     
     % Incline -5
     if by_incline
-        plot_sorted_data_automatic_buckets(in5_A_t, speed_filter, directory, -5, "Ankle", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(in5_A_t, speed_filter, directory, -5, "Ankle", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(in5_A_a, speed_filter, directory, -5, "Ankle", "Angle", "Degrees", num_buckets);
-        plot_sorted_data_automatic_buckets(in5_K_t, speed_filter, directory, -5, "Knee", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(in5_K_t, speed_filter, directory, -5, "Knee", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(in5_K_a, speed_filter, directory, -5, "Knee", "Angle", "Degrees", num_buckets);
     end
     
     % Incline 0
     if by_incline
-        plot_sorted_data_automatic_buckets(i0_A_t, speed_filter, directory, 0, "Ankle", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(i0_A_t, speed_filter, directory, 0, "Ankle", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(i0_A_a, speed_filter, directory, 0, "Ankle", "Angle", "Degrees", num_buckets);
-        plot_sorted_data_automatic_buckets(i0_K_t, speed_filter, directory, 0, "Knee", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(i0_K_t, speed_filter, directory, 0, "Knee", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(i0_K_a, speed_filter, directory, 0, "Knee", "Angle", "Degrees", num_buckets);
     end
     
     % Incline 5
     if by_incline
-        plot_sorted_data_automatic_buckets(i5_A_t, speed_filter, directory, 5, "Ankle", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(i5_A_t, speed_filter, directory, 5, "Ankle", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(i5_A_a, speed_filter, directory, 5, "Ankle", "Angle", "Degrees", num_buckets);
-        plot_sorted_data_automatic_buckets(i5_K_t, speed_filter, directory, 5, "Knee", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(i5_K_t, speed_filter, directory, 5, "Knee", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(i5_K_a, speed_filter, directory, 5, "Knee", "Angle", "Degrees", num_buckets);
     end
     
     % Incline 10
     if by_incline
-        plot_sorted_data_automatic_buckets(i10_A_t, speed_filter, directory, 10, "Ankle", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(i10_A_t, speed_filter, directory, 10, "Ankle", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(i10_A_a, speed_filter, directory, 10, "Ankle", "Angle", "Degrees", num_buckets);
-        plot_sorted_data_automatic_buckets(i10_K_t, speed_filter, directory, 10, "Knee", "Torque", "Unkown Units", num_buckets);
+        plot_sorted_data_automatic_buckets(i10_K_t, speed_filter, directory, 10, "Knee", "Torque", "N*m / kg", num_buckets);
         plot_sorted_data_automatic_buckets(i10_K_a, speed_filter, directory, 10, "Knee", "Angle", "Degrees", num_buckets);
     end
 
@@ -124,29 +124,29 @@ else
 % Plot based off metric and joint
     % Ankle Torque
     if ~by_incline
-        plot_sorted_data(in10_A_t, speed_filter, directory, -10, "Ankle", "Torque", "Unkown Units");
-        plot_sorted_data(in5_A_t, speed_filter, directory, -5, "Ankle", "Torque", "Unkown Units");
-        plot_sorted_data(i0_A_t, speed_filter, directory, 0, "Ankle", "Torque", "Unkown Units");
-        plot_sorted_data(i5_A_t, speed_filter, directory, 5, "Ankle", "Torque", "Unkown Units");
-        plot_sorted_data(i10_A_t, speed_filter, directory, 10, "Ankle", "Torque", "Unkown Units");
+        plot_sorted_data(in10_A_t, speed_filter, directory, -10, "Ankle", "Torque", "N*m / kg");
+        plot_sorted_data(in5_A_t, speed_filter, directory, -5, "Ankle", "Torque", "N*m / kg");
+        plot_sorted_data(i0_A_t, speed_filter, directory, 0, "Ankle", "Torque", "N*m / kg");
+        plot_sorted_data(i5_A_t, speed_filter, directory, 5, "Ankle", "Torque", "N*m / kg");
+        plot_sorted_data(i10_A_t, speed_filter, directory, 10, "Ankle", "Torque", "N*m / kg");
     end
     
     % Knee Torque
     if ~by_incline
-        plot_sorted_data(in10_K_t, speed_filter, directory, -10, "Knee", "Torque", "Unkown Units");
-        plot_sorted_data(in5_K_t, speed_filter, directory, -5, "Knee", "Torque", "Unkown Units");
-        plot_sorted_data(i0_K_t, speed_filter, directory, 0, "Knee", "Torque", "Unkown Units");
-        plot_sorted_data(i5_K_t, speed_filter, directory, 5, "Knee", "Torque", "Unkown Units");
-        plot_sorted_data(i10_K_t, speed_filter, directory, 10, "Knee", "Torque", "Unkown Units");
+        plot_sorted_data(in10_K_t, speed_filter, directory, -10, "Knee", "Torque", "N*m / kg");
+        plot_sorted_data(in5_K_t, speed_filter, directory, -5, "Knee", "Torque", "N*m / kg");
+        plot_sorted_data(i0_K_t, speed_filter, directory, 0, "Knee", "Torque", "N*m / kg");
+        plot_sorted_data(i5_K_t, speed_filter, directory, 5, "Knee", "Torque", "N*m / kg");
+        plot_sorted_data(i10_K_t, speed_filter, directory, 10, "Knee", "Torque", "N*m / kg");
     end
     
     % Ankle Angle
     if ~by_incline
-        plot_sorted_data(in10_A_a, speed_filter, directory, -10, "Ankle", "Angle", "Unkown Units");
-        plot_sorted_data(in5_A_a, speed_filter, directory, -5, "Ankle", "Angle", "Unkown Units");
-        plot_sorted_data(i0_A_a, speed_filter, directory, 0, "Ankle", "Angle", "Unkown Units");
-        plot_sorted_data(i5_A_a, speed_filter, directory, 5, "Ankle", "Angle", "Unkown Units");
-        plot_sorted_data(i10_A_a, speed_filter, directory, 10, "Ankle", "Angle", "Unkown Units");
+        plot_sorted_data(in10_A_a, speed_filter, directory, -10, "Ankle", "Angle", "N*m / kg");
+        plot_sorted_data(in5_A_a, speed_filter, directory, -5, "Ankle", "Angle", "N*m / kg");
+        plot_sorted_data(i0_A_a, speed_filter, directory, 0, "Ankle", "Angle", "N*m / kg");
+        plot_sorted_data(i5_A_a, speed_filter, directory, 5, "Ankle", "Angle", "N*m / kg");
+        plot_sorted_data(i10_A_a, speed_filter, directory, 10, "Ankle", "Angle", "N*m / kg");
     end
     
     % Knee Angle
@@ -161,41 +161,41 @@ else
 % Plot based off incline
     % Incline -10
     if by_incline
-        plot_sorted_data(in10_A_t, speed_filter, directory, -10, "Ankle", "Torque", "Unkown Units");
+        plot_sorted_data(in10_A_t, speed_filter, directory, -10, "Ankle", "Torque", "N*m / kg");
         plot_sorted_data(in10_A_a, speed_filter, directory, -10, "Ankle", "Angle", "Degrees");
-        plot_sorted_data(in10_K_t, speed_filter, directory, -10, "Knee", "Torque", "Unkown Units");
+        plot_sorted_data(in10_K_t, speed_filter, directory, -10, "Knee", "Torque", "N*m / kg");
         plot_sorted_data(in10_K_a, speed_filter, directory, -10, "Knee", "Angle", "Degrees");
     end
     
     % Incline -5
     if by_incline
-        plot_sorted_data(in5_A_t, speed_filter, directory, -5, "Ankle", "Torque", "Unkown Units");
+        plot_sorted_data(in5_A_t, speed_filter, directory, -5, "Ankle", "Torque", "N*m / kg");
         plot_sorted_data(in5_A_a, speed_filter, directory, -5, "Ankle", "Angle", "Degrees");
-        plot_sorted_data(in5_K_t, speed_filter, directory, -5, "Knee", "Torque", "Unkown Units");
+        plot_sorted_data(in5_K_t, speed_filter, directory, -5, "Knee", "Torque", "N*m / kg");
         plot_sorted_data(in5_K_a, speed_filter, directory, -5, "Knee", "Angle", "Degrees");
     end
     
     % Incline 0
     if by_incline
-        plot_sorted_data(i0_A_t, speed_filter, directory, 0, "Ankle", "Torque", "Unkown Units");
+        plot_sorted_data(i0_A_t, speed_filter, directory, 0, "Ankle", "Torque", "N*m / kg");
         plot_sorted_data(i0_A_a, speed_filter, directory, 0, "Ankle", "Angle", "Degrees");
-        plot_sorted_data(i0_K_t, speed_filter, directory, 0, "Knee", "Torque", "Unkown Units");
+        plot_sorted_data(i0_K_t, speed_filter, directory, 0, "Knee", "Torque", "N*m / kg");
         plot_sorted_data(i0_K_a, speed_filter, directory, 0, "Knee", "Angle", "Degrees");
     end
     
     % Incline 5
     if by_incline
-        plot_sorted_data(i5_A_t, speed_filter, directory, 5, "Ankle", "Torque", "Unkown Units");
+        plot_sorted_data(i5_A_t, speed_filter, directory, 5, "Ankle", "Torque", "N*m / kg");
         plot_sorted_data(i5_A_a, speed_filter, directory, 5, "Ankle", "Angle", "Degrees");
-        plot_sorted_data(i5_K_t, speed_filter, directory, 5, "Knee", "Torque", "Unkown Units");
+        plot_sorted_data(i5_K_t, speed_filter, directory, 5, "Knee", "Torque", "N*m / kg");
         plot_sorted_data(i5_K_a, speed_filter, directory, 5, "Knee", "Angle", "Degrees");
     end
     
     % Incline 10
     if by_incline
-        plot_sorted_data(i10_A_t, speed_filter, directory, 10, "Ankle", "Torque", "Unkown Units");
+        plot_sorted_data(i10_A_t, speed_filter, directory, 10, "Ankle", "Torque", "N*m / kg");
         plot_sorted_data(i10_A_a, speed_filter, directory, 10, "Ankle", "Angle", "Degrees");
-        plot_sorted_data(i10_K_t, speed_filter, directory, 10, "Knee", "Torque", "Unkown Units");
+        plot_sorted_data(i10_K_t, speed_filter, directory, 10, "Knee", "Torque", "N*m / kg");
         plot_sorted_data(i10_K_a, speed_filter, directory, 10, "Knee", "Angle", "Degrees");
     end
 end
@@ -269,9 +269,9 @@ recorded_speed(2, :) = {"0.8", "1", "1.2"};
 
 
 % 3. Plot the vectors
-    colors = ['r' 'g' 'w' 'c' 'm' 'y' 'b'];
+    colors = ['r' 'g' 'b' 'c' 'm' 'y' 'w'];
     figure;
-    tiledlayout(1, 3);
+    tiledlayout(2, 2); % tiledlayout(1, 3);
     
     % --- Plot 1: Cadence ---
     nexttile;
@@ -324,7 +324,7 @@ recorded_speed(2, :) = {"0.8", "1", "1.2"};
     hold off;
     
     % --- Plot 3: Calculated Speed ---
-    if speed_filter
+    %if speed_filter
         nexttile;
         hold on;
         legend_entries = {};
@@ -348,10 +348,10 @@ recorded_speed(2, :) = {"0.8", "1", "1.2"};
         legend(legend_entries, 'location','best');
         grid on;
         hold off;
-    end
+    %end
 
     % --- Plot 4: Recorded Speed ---
-    if ~speed_filter
+    %if ~speed_filter
         nexttile;
         hold on;
         legend_entries = {};
@@ -375,7 +375,7 @@ recorded_speed(2, :) = {"0.8", "1", "1.2"};
         legend(legend_entries,'location','best');
         grid on;
         hold off;
-    end
+    %end
     
     % --- Title ---
     if speed_filter

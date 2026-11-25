@@ -1,5 +1,5 @@
+clear;
 clearvars -except directory dataBase;
-close all;
 
 % Load in Data
 directory = "/Users/kefuller/Fuller_Locolab/";

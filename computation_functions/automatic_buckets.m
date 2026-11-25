@@ -1,3 +1,5 @@
+
+
 function [bucket_set] = automatic_buckets(data, priority_row, num_buckets, get_average_std)
 bucket_set{3, num_buckets} = [];
 

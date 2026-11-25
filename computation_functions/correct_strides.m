@@ -1,7 +1,10 @@
 function [y_corrected] = correct_strides(data, v_treadmill)    
     % 1. Establish initial y-position and other variables
     y = [squeeze(data.markers.LHEE(:, 2, :)), squeeze(data.markers.RHEE(:, 2, :))];
-    cadences = find_cadence(data);
+    
+    [l_C, r_C] = find_cadence(data);
+    cadences = [l_C, r_C];
+
     y_corrected = y;
 
     % 2. Make corrections for each step

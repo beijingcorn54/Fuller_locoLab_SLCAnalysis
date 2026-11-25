@@ -1,17 +1,17 @@
+clear;
 clearvars -except directory dataBase;
-close all;
 
 % Control (Dynamic) Variables
 export_to_pdf = false;
 pdf_file_name = "Torque and Angle Surfaces, All Speeds.pdf";
-speed_filter = false;
+speed_filter = 1.2;
 by_incline = false;
-num_buckets = false;
-sub_highlight = [2];    % Cadence trials are never highlighted 
+num_buckets = 10;
+sub_highlight = [];      % Cadence trials are never highlighted 
                         % because many steps are of the same cadence. 
                         % The average of these cadences are from 
                         % multiple people, so one person cannot be highlighted
-sub_remove = [];
+sub_remove = [2 6];
 
 % Static Variables
 force_threshold = 25;
